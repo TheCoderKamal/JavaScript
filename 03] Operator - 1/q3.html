@@ -1,0 +1,30 @@
+<!-- Compare two numbers and log if they are equal or not. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>question - 3</title>
+</head>
+<body>
+    <b>Enter first number : </b>
+    <input type="text" id="num1"><br><br>
+
+    <b>Enter second number : </b>
+    <input type="text" id="num2"><br><br>
+
+    <h1 id="ans"></h1>
+</body>
+</html>
+
+<script>
+    let a = document.getElementById("num1").value;
+    let b = document.getElementById("num2").value;
+
+    if (a == b) {
+        document.getElementById("ans").innerHTML = "The numbers are equal";
+    } else {
+        document.getElementById("ans").innerHTML = "The numbers are not equal";
+    }
+</script>

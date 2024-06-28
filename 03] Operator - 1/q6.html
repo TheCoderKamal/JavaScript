@@ -1,0 +1,35 @@
+<!-- Use ||  OR operator and display result among 4 values -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question - 1</title>
+</head>
+<body>
+    <b>Enter First Value : </b>
+    <input type="text" id="f1"><br><br>
+
+    <b>Enter Second Value : </b>
+    <input type="text" id="f2"><br><br>
+
+    <b>Enter Third Value : </b>
+    <input type="text" id="f3"><br><br>
+
+    <b>Enter Fourth Value : </b>
+    <input type="text" id="f4"><br><br>
+
+    <h1 id="ans"></h1>
+</body>
+</html>
+
+<script>
+    let a = document.getElementById("f1").value
+    let b = document.getElementById("f2").value
+    let c = document.getElementById("f3").value
+    let d = document.getElementById("f4").value
+    let com = (+a == +b || +c == +d)
+    document.getElementById("ans").innerHTML = com
+    console.log(com)
+</script>

@@ -1,0 +1,28 @@
+<!-- Add two numbers and display their sum. -->
+
+<!DOCTYPE html>
+<html lang="en">q3
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question - 1</title>
+</head>
+<body>
+    <b>Enter first number : </b>
+    <input type="text" id="num1"><br><br>
+
+    <b>Enter second number : </b>
+    <input type="text" id="num2"><br><br>
+
+    <h1>The sum of two numbers : <b id="ans"></b></h1>
+</body>
+</html>
+
+<script>
+    let a = document.getElementById("num1").value;
+    let b = document.getElementById("num2").value;
+
+    let sum = +a + +b;
+    document.getElementById("ans").innerHTML = sum;
+    console.log(sum);
+</script>
