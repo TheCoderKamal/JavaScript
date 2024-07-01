@@ -1,0 +1,21 @@
+<!-- Check if a person is both over 18 years old and has a valid driver's license. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question - 10.1</title>
+</head>
+<body>
+    <h1 id="ans"></h1>
+</body>
+</html>
+
+<script>
+    let age = 18;
+    let license = true;
+
+    let ans = (age >= 18) && license;
+    document.getElementById('ans').innerHTML = "Answer : " + ans;
+</script>
