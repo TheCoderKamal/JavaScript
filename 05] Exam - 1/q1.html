@@ -1,0 +1,26 @@
+<!-- Take value in an input boxes and  find Simple Interest -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question - 1</title>
+</head>
+<body>
+    <big>Enter principal amount : <input type="text" id="principal"></big><br>
+    <big>Enter The rate : <input type="text" id="rate"></big><br>
+    <big>Enter time (year) : <input type="text" id="year"></big><br>
+    <h1 id="ans"></h1>
+</body>
+</html>
+
+<script>
+    let principal = document.getElementById('principal').value;
+    let rate = document.getElementById('rate').value;
+    let year = document.getElementById('year').value;
+
+    let si = (principal * rate * year) / 100;
+
+    document.getElementById('ans').innerHTML = si;
+</script>

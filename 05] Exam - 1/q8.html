@@ -1,0 +1,29 @@
+<!-- Swap 3 Numbers taking value in input. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question - 8</title>
+</head>
+<body>
+    <big>Enter first number : <input type="text" id="num1"></big><br>
+    <big>Enter second number : <input type="text" id="num2"></big><br>
+    <big>Enter third number : <input type="text" id="num3"></big><br>
+    <h1 id="ans"></h1>
+</body>
+</html>
+
+<script>
+    let number1 = document.getElementById("num1").value;
+    let number2 = document.getElementById("num2").value;
+    let number3 = document.getElementById("num3").value;
+
+    let temp = number1;
+    number1 = number2;
+    number2 = number3;
+    number3 = temp;
+    
+    document.getElementById("ans").innerHTML = number1 + " " + number2 + " " + number3;
+</script>
