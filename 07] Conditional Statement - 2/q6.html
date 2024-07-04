@@ -1,0 +1,32 @@
+<!-- You are provided with three variables:
+    - `cpw` (current password): This variable holds the current password.
+    - `stpw` (stored password): This variable holds the stored password.
+
+
+2. Check if the `cpw` (current password) matches the `stpw` (stored password). -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Enter your password :</h1>
+    <input type="text" id="password">
+    <h1 id="ans"></h1>
+</body>
+</html>
+<script>
+    let password = document.getElementById("password").value;
+    if(password == ""){
+        document.getElementById("ans").innerHTML = "Enter your password"
+    }else{
+        if(password == "123"){
+        document.getElementById("ans").innerHTML = "Correct";
+        }
+        else{
+            document.getElementById("ans").innerHTML = "Incorrect";
+        }
+    }
+</script>

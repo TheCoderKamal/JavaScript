@@ -1,0 +1,42 @@
+<!-- Write a JavaScript program to calculate the simple interest. 
+The program should take principal amount, rate of interest, and time in years as inputs and output the calculated interest.
+Enter the principal amount: 5000
+Enter the rate of interest: 3.5
+Enter the time in years: 2 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question - 4</title>
+</head>
+<body>
+    <big>
+        Enter principal amount : 
+        <input type="text" id="p"><br>
+
+        Enter rate of interest :
+        <input type="text" id="r"><br>
+
+        Enter the time in year : 
+        <input type="text" id="t"><br>
+
+        <h1 id="ans"></h1>
+    </big>
+</body>
+</html>
+
+<script>
+    let p = parseInt(document.getElementById("p").value);
+    let r = parseInt(document.getElementById("r").value);
+    let t = parseInt(document.getElementById("t").value);
+
+    if(isNaN(p) && isNaN(r) && isNaN(t)){
+        document.getElementById("ans").innerHTML = "Bro, Input to dal !!!";
+    }
+    else{
+        let interest = p * (1 + r * t) / 100
+        document.getElementById("ans").innerHTML = "Interest : " + interest;
+    }
+</script>

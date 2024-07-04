@@ -1,0 +1,44 @@
+<!-- Write a JavaScript program that takes three numbers as input and finds the minimum among them. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question - 1</title>
+</head>
+<body>
+    <big>
+        Enter first number : 
+        <input type="text" id="num1"><br>
+
+        Enter second number : 
+        <input type="text" id="num2"><br>
+
+        Enter third number : 
+        <input type="text" id="num3"><br>
+
+        <h1 id="ans"></h1>
+    </big>
+</body>
+</html>
+
+<script>
+    let num1 = parseInt(document.getElementById("num1").value);
+    let num2 = parseInt(document.getElementById("num2").value);
+    let num3 = parseInt(document.getElementById("num3").value);
+
+    if(isNaN(num1) && isNaN(num2) && isNaN(num2)){
+        document.getElementById("ans").innerHTML = "Bro, Input to dal !!!";
+    }
+    else{
+        if(num1 < num2 && num1 < num3){
+            document.getElementById("ans").innerHTML = num1 + " is the smallest.";
+        }
+        else if(num2 < num3){
+            document.getElementById("ans").innerHTML = num2 + " is the smallest.";
+        }
+        else{
+            document.getElementById("ans").innerHTML = num3 + " is the smallest."
+        }
+    }
+</script>
