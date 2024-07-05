@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question - 3</title>
+</head>
+<body>
+    <h1>WEATHER CHECK :</h1>
+    <big>
+        Enter if it's sunny or not: 
+        <input type="text" id="sunny"><br>
+
+        Enter if it's warm or not: 
+        <input type="text" id="warm"><br>
+        
+        <button onclick="checkWeather()">Check Weather</button>
+    </big>
+
+    <h1 id="answer"></h1>
+
+    <script>
+        if (document.getElementById("sunny").value === "" || document.getElementById("warm").value === "") {
+                document.getElementById("answer").innerHTML = "Please, give some input.";
+        } 
+        function checkWeather() {
+            let isSunny = document.getElementById("sunny").value.trim().toLowerCase();
+            let isWarm = document.getElementById("warm").value.trim().toLowerCase();
+
+            isSunny = (isSunny === 'true');
+            isWarm = (isWarm === 'true');
+
+            if (document.getElementById("sunny").value === "" || document.getElementById("warm").value === "") {
+                document.getElementById("answer").innerHTML = "Please, give some input.";
+            } else {
+                if (isSunny || isWarm) {
+                    document.getElementById("answer").innerHTML = "The weather is either sunny or warm (or both).";
+                } else {
+                    document.getElementById("answer").innerHTML = "The weather is neither sunny nor warm.";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

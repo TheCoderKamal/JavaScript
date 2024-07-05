@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question - 2</title>
+</head>
+<body>
+    <h1>AGE CATEGORIZATION : </h1>
+    <br>
+
+    <big>
+        Enter an Age : 
+        <input type="text" id="age">
+    </big>
+
+    <h1 id="answer"></h1>
+</body>
+</html>
+
+<script>
+    let age = parseInt(document.getElementById("age").value);
+
+    if(isNaN(age)){
+        document.getElementById("answer").innerHTML = "Please, give some input."
+    }
+    else{
+        if(age >= 0 && age <= 12){
+            document.getElementById("answer").innerHTML = age + " is between 0 and 12 so you are child."
+        }
+        else if(age >= 13 && age <= 19){
+            document.getElementById("answer").innerHTML = age + " is between 13 and 19 so you are teen.";
+        }
+        else if(age >= 20 && age <= 59){
+            document.getElementById("answer").innerHTML = age + " is between 20 and 59 so you are adult.";
+        }
+        else if(age > 60){
+            document.getElementById("answer").innerHTML = age + " is greater or equals 60 so you are senior.";
+        }
+        else{
+            document.getElementById("answer").innerHTML = age + " is not valid.";
+        }
+    }
+
+    
+</script>
+</body>
+</html>

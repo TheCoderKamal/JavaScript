@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question - 3</title>
+</head>
+<body>
+    <h1>WEATHER CHECK :</h1>
+    <big>
+        Enter if it's rainning or not: 
+        <input type="text" id="rain"><br>
+    </big>
+
+    <h1 id="answer"></h1>
+
+    <script>
+            let isRainning = document.getElementById("rain").value.trim().toLowerCase();
+
+            isRainning = (isRainning === 'true');
+
+            if (document.getElementById("rain").value === "") {
+                document.getElementById("answer").innerHTML = "Please, give some input.";
+            } 
+            else {
+                if (isRainning) {
+                    document.getElementById("answer").innerHTML = "Its rainning.";
+                } 
+                else {
+                    document.getElementById("answer").innerHTML = "Its not rainning .";
+                }
+            }
+        
+    </script>
+</body>
+</html>

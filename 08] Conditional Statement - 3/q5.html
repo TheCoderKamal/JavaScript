@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount Eligibility and Triangle Type</title>
+</head>
+<body>
+    <h1>Check Discount Eligibility and Triangle Type</h1>
+
+    <h2>Discount Eligibility</h2>
+    <button onclick="checkDiscountEligibility()">Check Discount Eligibility</button>
+    <p id="discountResult"></p>
+
+    <h2>Triangle Type</h2>
+    <label for="side1">Side 1:</label>
+    <input type="number" id="side1" name="side1">
+    <br>
+    <label for="side2">Side 2:</label>
+    <input type="number" id="side2" name="side2">
+    <br>
+    <label for="side3">Side 3:</label>
+    <input type="number" id="side3" name="side3">
+    <br>
+    <button onclick="checkTriangleType()">Check Triangle Type</button>
+    <p id="triangleResult"></p>
+
+    <script>
+        function checkDiscountEligibility() {
+            let hasCoupon = true;
+            let isMember = false; 
+
+            if (hasCoupon || isMember) {
+                document.getElementById("discountResult").innerText = "You are eligible for a discount.";
+            } else {
+                document.getElementById("discountResult").innerText = "You are not eligible for a discount.";
+            }
+        }
+
+        function checkTriangleType() {
+            let side1 = parseFloat(document.getElementById("side1").value);
+            let side2 = parseFloat(document.getElementById("side2").value);
+            let side3 = parseFloat(document.getElementById("side3").value);
+
+            if (side1 === side2 && side2 === side3) {
+                document.getElementById("triangleResult").innerText = "The triangle is equilateral.";
+            } else if (side1 === side2 || side2 === side3 || side1 === side3) {
+                document.getElementById("triangleResult").innerText = "The triangle is isosceles.";
+            } else {
+                document.getElementById("triangleResult").innerText = "The triangle is scalene.";
+            }
+        }
+    </script>
+</body>
+</html>
