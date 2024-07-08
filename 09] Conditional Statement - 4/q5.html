@@ -1,0 +1,28 @@
+<!-- Use a ternary operator to assign the string "even" or "odd" to a variable `result` based on whether a variable `number` is even or odd. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question - 5</title>
+</head>
+<body>
+    <big>
+        Enter a number : 
+        <input type="text" id="number">
+    </big>
+
+    <h1 id="answer"></h1>
+</body>
+</html>
+
+<script>
+    let number = parseInt(document.getElementById("number").value);
+    if(isNaN(number)){
+        document.getElementById("answer").innerHTML = "Please, give some input first !!!";
+    }
+    else{
+        (number % 2 == 0) ? document.getElementById("answer").innerHTML = "even number" : document.getElementById("answer").innerHTML = "odd number";
+    }
+</script>

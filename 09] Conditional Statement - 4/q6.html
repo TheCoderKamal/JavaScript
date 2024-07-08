@@ -1,0 +1,39 @@
+<!-- 
+    Write a series of conditional statements that check if a variable `temperature` is below 0, between 0 and 100, or above 100, and log appropriate messages for each range.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question - 6</title>
+</head>
+<body>
+    <big>
+        Enter the temperature : 
+        <input type="text" id="temp">
+    </big>
+
+    <h1 id="answer"></h1>
+</body>
+</html>
+
+<script>
+    let temp = parseInt(document.getElementById("temp").value);
+
+    if(isNaN(temp)){
+        document.getElementById("answer").innerHTML = "Please, give some input first !!!";
+    }
+    else{
+        if(temp < 0){
+            document.getElementById("answer").innerHTML = "temperature is below 0.";
+        }
+        else if(temp >= 0 && temp <= 100){
+            document.getElementById("answer").innerHTML = "temperature is between 0 and 100.";
+        }
+        else{
+            document.getElementById("answer").innerHTML = "temperature is above 100.";
+        }
+    }
+</script>

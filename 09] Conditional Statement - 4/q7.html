@@ -1,0 +1,34 @@
+<!-- Using logical operators, write an expression that checks if both `x` and `y` are non-zero. Log "Both are non-zero" if true. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question - 7</title>
+</head>
+<body>
+    Enter the value of X : 
+    <input type="text" id="x"><br>
+
+    Enter the value of Y : 
+    <input type="text" id="y"><br>
+
+    <h1 id="answer"></h1>
+</body>
+</html>
+
+<script>
+    let x = parseInt(document.getElementById("x").value);
+    let y = parseInt(document.getElementById("y").value);
+
+    
+    if(isNaN(x) && isNaN(y)){
+        document.getElementById("answer").innerHTML = "Please, give some input first !!!";
+    }
+    else{
+        if(x!=0 && y!=0){
+            document.getElementById("answer").innerHTML = "Both are non-zero";
+        }
+    }
+</script>

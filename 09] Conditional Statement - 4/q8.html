@@ -1,0 +1,30 @@
+<!-- Create a conditional statement that checks if a variable `password` is at least 8 characters long. If it is, log "Password is strong". -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question - 8</title>
+</head>
+<body>
+    Enter a password : 
+    <input type="text" id="pass">
+
+    <h1 id="answer"></h1>
+</body>
+</html>
+
+<script>
+    let pass = document.getElementById("pass").value;
+
+    
+    if(pass == ""){
+        document.getElementById("answer").innerHTML = "Please, give some input first !!!";
+    }
+    else{
+        if(pass.length >= 8){
+            document.getElementById("answer").innerHTML = "Password is Strong.";
+        }
+    }
+</script>

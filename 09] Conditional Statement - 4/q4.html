@@ -1,0 +1,26 @@
+<!-- Write an expression that checks if a variable `score` is either 100 or 200 and log "Perfect score" if true. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question - 4</title>
+</head>
+<body>
+    <big>
+        Enter your score : 
+        <input type="text" id="score">
+    </big>
+
+    <h1 id="answer"></h1>
+</body>
+</html>
+
+<script>
+    let score = parseInt(document.getElementById("score").value);
+
+    if(score == 100 || score == 200){
+        document.getElementById("answer").innerHTML = "Perfect score";
+    }
+</script>

@@ -1,0 +1,30 @@
+<!-- Write a conditional statement that checks if a variable `day` is either "Saturday" or "Sunday". If true, log "It's the weekend". -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question - 9</title>
+</head>
+<body>
+    Enter the day : 
+    <input type="text" id="day">
+
+    <h1 id="answer"></h1>
+</body>
+</html>
+
+<script>
+    let day = document.getElementById("day").value;
+    day = day.toLowerCase();
+
+    if(day == ""){
+        document.getElementById("answer").innerHTML = "Please, give some input first !!!";
+    }
+    else{
+        if(day == "saturday" || day == "sunday"){
+            document.getElementById("answer").innerHTML = "It's the weekend.";
+        }
+    }
+</script>

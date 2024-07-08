@@ -1,0 +1,26 @@
+<!-- Write a conditional statement that checks if a variable `x` is greater than 10 and less than 20. If true, log "x is between 10 and 20". -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question - 1</title>
+</head>
+<body>
+    <big>
+        Enter a number : 
+        <input type="text" id="number">
+    </big>
+
+    <h1 id="answer"></h1>
+</body>
+</html>
+
+<script>
+    let number = parseInt(document.getElementById("number").value);
+
+    if(number > 10 && number < 20){
+        document.getElementById("answer").innerHTML = number + " is between 10 and 20.";
+    }
+</script>
