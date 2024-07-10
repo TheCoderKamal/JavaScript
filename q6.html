@@ -1,0 +1,33 @@
+<!-- Write a Program to print the sum of all numbers using for loop. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <big>
+        Enter the start and end numbers : 
+        <input type="text" id="start">
+        <input type="text" id="end">
+    </big>
+</body>
+</html>
+
+<script>
+    let start = parseInt(document.getElementById("start").value);
+    let end = parseInt(document.getElementById("end").value);;
+    let sum = 0;
+
+    if(start == "" || end == ""){
+        document.write(`<h1>Enter some input !!!</h1>`);
+    }
+    else{
+        for(let i = start; i <= end; i++){
+            sum += i;
+        }
+        document.write(`<h1>The sum of numbers from ${start} to ${end} is ${sum}</h1>`);
+    }
+</script>

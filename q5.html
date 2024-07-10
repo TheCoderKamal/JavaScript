@@ -1,0 +1,31 @@
+<!-- Write a Program to print the factorial of a number using for loop. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question - 5</title>
+</head>
+<body>
+    <big>
+        Enter a number : 
+        <input type="text" id="num">
+    </big>
+</body>
+</html>
+
+<script>
+    let num = document.getElementById("num").value;
+    let fact = 1;
+
+    if(num == "") {
+        document.write(`<h1>Enter some input !!!</h1>`);
+    }
+    else{
+        for(let i = 1; i <= num; i++){
+            fact *= i;
+        }
+        document.write(`<h1>The factorial of ${num} is ${fact}</h1>`);
+    }
+</script>

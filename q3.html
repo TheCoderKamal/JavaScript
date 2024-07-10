@@ -1,0 +1,28 @@
+<!-- Write a Program to print even numbers from 1 to 20 using a do-while loop. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question - 3</title>
+</head>
+<body>
+    <big>
+        Enter the number : 
+        <input type="text" id="num">
+    </big>
+</body>
+</html>
+
+<script>
+    let a = 1;
+    let num = document.getElementById("num").value;
+
+    do{
+        if(a % 2 === 0){
+            document.write(`<h1>${a}</h1>`);
+        }
+        a++;  
+    }while (a <= num);
+</script>
