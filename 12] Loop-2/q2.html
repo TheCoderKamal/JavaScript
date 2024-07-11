@@ -1,0 +1,29 @@
+<!-- Reverse a given string using loops. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question - 2</title>
+</head>
+<body>
+    <big>
+        Enter a string : <input type="text" id="str">
+
+        <h1 id="answer"></h1>
+    </big>
+</body>
+</html>
+
+
+<script>
+    let str = document.getElementById("str").value;
+    let reversedStr = "";
+
+    for (let i = str.length - 1; i >= 0; i--) {
+        reversedStr += str[i];
+    }
+
+    document.getElementById("answer").innerHTML = reversedStr;
+</script>
