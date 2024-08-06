@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-1</title>
+</head>
+<body>
+    <h1>Head-1</h1>
+    <h1>Head-2</h1>
+    <h1>Head-3</h1>
+    <h1>Head-4</h1>
+    <h1>Head-5</h1>
+
+    <button>Change Color</button>
+</body>
+</html>
+
+<script>
+    
+
+    let button = document.querySelector('button');
+
+    button.addEventListener('click', function() {
+        let heading = document.querySelector('h1');
+        heading.style.color = 'red';
+    });
+</script>

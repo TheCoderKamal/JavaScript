@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-2</title>
+</head>
+<body>
+    <h3>Head-1</h3>
+    <h3>Head-2</h3>
+    <h3>Head-3</h3>
+    <h3>Head-4</h3>
+    <h3>Head-5</h3>
+
+    <button>Change Color</button>
+</body>
+</html>
+
+<script>
+    let button = document.querySelector('button');
+
+    button.addEventListener('click' , () => {
+        let heading = document.querySelectorAll('h3');
+
+        for(let i = 0; i < heading.length; i++) {
+            heading[i].style.color = "green";
+        }
+    })
+</script>

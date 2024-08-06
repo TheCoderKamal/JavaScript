@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-4</title>
+</head>
+<body>
+    <h1>Heading-1</h1>
+    <p class="green">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae rem, eos assumenda sequi vel deleniti. Nisi cumque cum accusamus facilis natus voluptates cupiditate in, aspernatur hic, at veniam autem esse.
+    </p>
+    <h1>Heading-2</h1>
+    <p class="green">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti dolorum dolor, laborum laudantium cupiditate necessitatibus ut a quos fuga. Quam officia, delectus minus recusandae rerum ullam temporibus libero nostrum facere!
+
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, tempore vel incidunt fuga explicabo sint, recusandae quae velit iusto consequatur cupiditate nihil! Nam nemo dicta praesentium aut quas quidem odio!
+    </p>
+    <button id="changeGreen">Change Green</button>
+
+
+    <hr>
+
+    <h1>Heading-1</h1>
+    <p class="blue">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae rem, eos assumenda sequi vel deleniti. Nisi cumque cum accusamus facilis natus voluptates cupiditate in, aspernatur hic, at veniam autem esse.
+    </p>
+    <h1>Heading-2</h1>
+    <p class="blue">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti dolorum dolor, laborum laudantium cupiditate necessitatibus ut a quos fuga. Quam officia, delectus minus recusandae rerum ullam temporibus libero nostrum facere!
+
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, tempore vel incidunt fuga explicabo sint, recusandae quae velit iusto consequatur cupiditate nihil! Nam nemo dicta praesentium aut quas quidem odio!
+    </p>
+
+    <button id="changeBlue">Change Blue</button>
+
+    <hr>
+
+    <h1>Heading-1</h1>
+    <p class="red">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae rem, eos assumenda sequi vel deleniti. Nisi cumque cum accusamus facilis natus voluptates cupiditate in, aspernatur hic, at veniam autem esse.
+    </p>
+    <h1>Heading-2</h1>
+    <p class="red">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti dolorum dolor, laborum laudantium cupiditate necessitatibus ut a quos fuga. Quam officia, delectus minus recusandae rerum ullam temporibus libero nostrum facere!
+
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, tempore vel incidunt fuga explicabo sint, recusandae quae velit iusto consequatur cupiditate nihil! Nam nemo dicta praesentium aut quas quidem odio!
+    </p>
+
+    <button id="changeRed">Change Red</button>
+    
+    <hr>
+</body>
+</html>
+
+<script>
+    let buttonGreen = document.querySelector('#changeGreen');
+
+    buttonGreen.addEventListener('click', () => {
+        let element = document.querySelectorAll('.green');
+        for(let i = 0; i < element.length; i++) {
+            element[i].style.color = 'green';
+        }
+    })
+
+    let buttonBlue = document.querySelector('#changeBlue');
+
+    buttonBlue.addEventListener('click', () => {
+        let element = document.querySelectorAll('.blue');
+        for(let i = 0; i < element.length; i++) {
+            element[i].style.color = 'blue';
+        }
+    })
+
+    let buttonRed = document.querySelector('#changeRed');
+
+    buttonRed.addEventListener('click', () => {
+        let element = document.querySelectorAll('.red');
+        for(let i = 0; i < element.length; i++) {
+            element[i].style.color = 'red';
+        }
+    })
+</script>
