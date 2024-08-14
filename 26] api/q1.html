@@ -6,20 +6,28 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div id="images"></div>
 </body>
 </html>
 
 <script>
-    fetch('https://fakestoreapi.com/products')
+    let result;
+    fetch('https://66b9b82bfa763ff550f94231.mockapi.io/api')
     .then((response) => {
         console.log(response);
         return response.json();
     })
     .then((result) => {
         console.log(result);
+        for (let i = 0; i < result.length; i++) {
+            let image = document.createElement('img');
+            const img = result[i].avatar;
+            image.src = img;
+
+            document.getElementById('images').appendChild(image);
+        }
     })
     .catch((error) => {
         console.error('Error:', error);
-    });
+    });    
 </script>
