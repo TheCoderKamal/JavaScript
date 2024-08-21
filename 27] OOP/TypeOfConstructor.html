@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type of Contructor</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    // Default Constructor
+    class Human{
+        Constructor() {
+            this.name = "John Smith";
+            this.age = 20;
+        }       
+
+        info(){
+            return console.log(`Name: ${this.name}, Age: ${this.age}`);
+        }
+    }
+    let person1 = new Human();
+    person1.info();
+
+
+
+    // Parameterized Constructor
+    class Student{
+        constructor(name, age, grade){
+            this.name = name;
+            this.age = age;
+            this.grade = grade;
+        }       
+
+        info(){
+            return console.log(`Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}`);
+        }
+    }
+    let person2 = new Student("Jane Doe", 18, "B");
+    person2.info();
+
+
+
+    // Copy Constructor
+    class Employee{
+        constructor(name, age, salary){
+            this.name = name;
+            this.age = age;
+            this.salary = salary;
+        }       
+
+        info(){
+            return console.log(`Name: ${this.name}, Age: ${this.age}, Salary: ${this.salary}`);
+        }
+
+        copy (){
+            return new Employee(this.name, this.age, this.salary); 
+        }
+    }
+    let person3 = new Employee("Mike Johnson", 25, 50000);
+    let person4 = person3.copy();
+    person3.info();
+    person4.info();
+</script>
