@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    fetch('https://66b9b82bfa763ff550f94231.mockapi.io/api')
+    .then((response) => {
+        return response.json();
+    })
+    .then((data) => {
+        console.log(data);
+        showData(data);
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+
+    let showData = (data) => {
+        document.write('<div class = "container">');
+  document.write('<div class = "row">');
+
+  for (let key of faculty){
+    document.write('<div class = "col-4">')
+    document.write('<div class="card" style="width: 105%;">');
+    document.write('<img src="'+key.FacultyImage+'" class="card-img-top" alt="...">');
+    document.write('<div class="card-body">');
+    document.write('<h5 class="card-title">Faculty id : '+key.FacultyID+'</h5>');
+    document.write('<h5 class="card-title">Faculty Name : '+key.FacultyName+'</h5>');
+    document.write('<h5 class="card-title">Faculty Designation : '+key.FacultyDesignation+'</h5>');
+    document.write('<a href="#" class="btn btn-primary">Go somewhere</a>');
+    document.write('</div>');
+    document.write('</div>');
+    document.write('</div>');
+  }
+
+document.write('</div></div>');
+    };
+</script>
