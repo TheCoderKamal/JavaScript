@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set interval</title>
+</head>
+<body>
+    <h1 id="count"></h1>
+    <button id="stop">Stop</button>
+</body>
+
+<script>
+    let count = 0;
+    let display = document.getElementById("count");
+
+    let counter = setInterval(() => {
+        count++;
+        display.innerText = count;
+    }, 1000);
+
+    document.getElementById("stop").addEventListener("click", () => {
+        clearInterval(counter);
+    });
+</script>
+
+</html>
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Demo</title>
+</head>
+
+
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .screen{
+        display: none;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .modal{
+        width: 50%;
+        height: 50%;
+        background-color: white;
+        margin: 10% auto;
+        border-radius: 20px;
+    }
+</style>
+
+<body>
+    <div class="screen">
+        <div class="modal"></div>
+    </div>
+
+    <button id="btn">View Model</button>
+</body>
+
+<script>
+    let button = document.getElementById("btn");
+    let screen = document.querySelector(".screen");
+
+    button.addEventListener("click", () => {
+        screen.style.display = "block";
+    });
+
+    window.addEventListener("click" , (e) => {
+        console.log(e);
+
+        if(e.target == screen){
+            screen.style.display = "none";
+        }
+    })
+</script>
+</html>
