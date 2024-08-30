@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Concept</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<style>
+        *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    :root{
+        --dark-color: #002635;
+        --light-color: #f8f9fa;
+        --bg: #cbd9ff85;
+        --success: rgb(10, 119, 10);
+    }
+    #container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--bg);
+    }
+
+    #start, #start2{
+        height: 60px;
+        width: 200px;
+        font-size: 20px;
+        background-color: var(--dark-color);
+        border-radius: 10px;
+        color: var(--light-color);
+        border: none;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+        margin-inline: 20px;
+    }
+
+    #start:hover, #start2:hover{
+        color: var(--dark-color);
+        background-color: transparent;
+        border: 1px solid var(--dark-color);
+    }
+
+    #modal, #modal2{
+        height: 60%;
+        width: 50%;
+        border-radius: 20px;
+        position: fixed;
+        padding: 20px 40px;
+        background: var(--dark-color);
+        display: none;
+    }
+
+    .material-symbols-outlined{
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        font-size: 30px;
+        cursor: pointer;
+        color: var(--light-color);
+    }
+
+    #content2, #content{
+        height: 100%;
+    }
+
+    .title{
+        color: var(--light-color);
+        font-size: 50px;
+    }
+
+    .division{
+        height: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #counter-input, #stopWatch-input{
+        height: 50px;
+        width: 300px;
+        padding: 20px;
+        border: 0;
+        outline: 0;
+        border-radius: 10px; 
+        font-size: 20px; 
+        color: var(--dark-color);
+        background-color: var(--light-color);  
+    }
+    #counter-start, #stopWatch-start{
+        height: 50px;
+        width: 300px;
+        font-size: 20px;
+        border-radius: 10px;
+        border: 2px solid var(--success);
+        outline: 0;
+        cursor: pointer;
+        margin-top: 10px;
+        background: transparent;
+        font-weight: 700;
+        color: var(--success);
+    }
+    #counter-display, #stopWatch-display{
+        background: var(--light-color);
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        font-size: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--dark-color);
+    }
+
+</style>
+
+<body>
+    <div id="container">
+        <button id="start">Stop Watch</button>
+        <button id="start2">Counter</button>
+
+        <div id="modal">
+            <div id="content">
+                <span class="material-symbols-outlined" id="cross">
+                    close
+                </span>
+
+                <h1 class="title">Stop Watch</h1>
+                <div class="division">
+                    <div class="div1">
+                        <input type="text" placeholder="Enter the time in second." id="stopWatch-input"><br>
+                        <button id="stopWatch-start">Start</button>
+                    </div>
+                    <div style="height: 50%; border: 1px solid var(--bg);"></div>
+                    <div class="div2">
+                        <h1 id="stopWatch-display">0</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal2">
+            <div id="content2">
+                <span class="material-symbols-outlined" id="cross2">
+                    close
+                </span>
+
+                <h1 class="title">Counter</h1>
+                <div class="division">
+                    <div class="div1">
+                        <input type="text" placeholder="Enter the time in second." id="counter-input"><br>
+                        <button id="counter-start">Start</button>
+                    </div>
+                    <div style="height: 50%; border: 1px solid var(--bg);"></div>
+                    <div class="div2">
+                        <h1 id="counter-display">0</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    const btn = document.getElementById("start");
+    const modal = document.getElementById("modal");
+    const btn2 = document.getElementById("start2");
+    const modal2 = document.getElementById("modal2");
+    const start = document.getElementById("counter-start");
+    const start2 = document.getElementById("stopWatch-start");
+    const display = document.getElementById("counter-display");
+    const display2 = document.getElementById("stopWatch-display");
+    const cross = document.getElementById("cross");
+    const cross2 = document.getElementById("cross2");
+
+    let count = 0;
+
+    btn.addEventListener("click", () => {
+        modal.style.display = "block";
+    });
+
+    window.addEventListener("click", (e) => {
+        if (e.target === container) {
+            modal.style.display = "none";
+        }
+    });
+
+    cross.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+
+    btn2.addEventListener("click", () => {
+        modal2.style.display = "block";
+    });
+
+    cross2.addEventListener("click", () => {
+        modal2.style.display = "none";
+    });
+
+    start.addEventListener("click", () => {
+        const counter = parseInt(document.getElementById("counter-input").value); 
+
+        if (isNaN(counter) || counter <= 0) {
+            alert("Please enter a valid positive number.");
+            return;
+        }
+
+        count = 0;
+        display.style.fontSize = "100px";
+        display.innerText = count;
+
+        const c = setInterval(() => {
+            if (count >= counter) {
+                clearInterval(c);
+                display.innerText = "Time's up!";
+                display.style.fontSize = "30px";
+                setTimeout(() => {
+                    document.getElementById("counter-input").value = ''; 
+                    location.reload();
+                }, 5000);
+            } else {
+                count++;
+                display.innerText = count;
+            }
+        }, 1000);
+    });
+
+
+    start2.addEventListener("click", () => {
+        const counter = parseInt(document.getElementById("stopWatch-input").value); 
+
+        if (isNaN(counter) || counter <= 0) {
+            alert("Please enter a valid positive number.");
+            return;
+        }
+
+        count = counter;
+        display2.style.fontSize = "100px";
+        display2.innerText = count;
+
+        const c = setInterval(() => {
+            if (count <= 0) {
+                clearInterval(c);
+                display2.innerText = "Time's up!";
+                display2.style.fontSize = "30px";
+                setTimeout(() => {
+                    document.getElementById("stopWatch-input").value = ''; 
+                    location.reload();
+                }, 5000);
+            } else {
+                count--;
+                display2.innerText = count;
+            }
+        }, 1000);
+    });
+</script>
+
+</html>
