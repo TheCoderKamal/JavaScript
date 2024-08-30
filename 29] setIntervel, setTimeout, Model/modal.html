@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modal Demo</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 
 
@@ -12,8 +14,28 @@
         padding: 0;
         margin: 0;
         box-sizing: border-box;
+        
     }
 
+    .center{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #btn{
+        height: 60px;
+        width: 175px;
+        font-size: 20px;
+        border: 0;
+        outline: 0;
+        border-radius: 10px;
+        background: #000;
+        color: aliceblue;
+        box-shadow: rgba(0, 0, 0, 0.56) 10px 15px 30px 3px;
+
+    }
     .screen{
         display: none;
         width: 100%;
@@ -30,20 +52,47 @@
         background-color: white;
         margin: 10% auto;
         border-radius: 20px;
+        padding: 20px 40px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .material-symbols-outlined{
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        font-size: 30px;
+        cursor: pointer;
     }
 </style>
 
 <body>
-    <div class="screen">
-        <div class="modal"></div>
+    <div class="center">
+        <div class="screen">
+            <div class="modal">
+                <span class="material-symbols-outlined" id="cross">
+                    close
+                </span>
+                <h1>This is Modal :</h1>
+                <br>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque debitis beatae reprehenderit cupiditate! Impedit mollitia facere debitis molestiae harum accusantium, rem quis suscipit est enim sint exercitationem ducimus incidunt nam.
+                Ex aliquam saepe odio deleniti officia recusandae eveniet quibusdam. Porro dignissimos amet molestias, repellat quasi unde id accusamus error sint cumque repudiandae, nobis modi maxime. Alias sint vitae quaerat deserunt.
+                Placeat id quidem ad natus, necessitatibus tenetur eaque sequi debitis architecto veniam non officia, repudiandae magnam ducimus ea illum facere obcaecati voluptatibus perferendis? Optio quisquam libero dolore mollitia consequuntur sapiente.
+                Perspiciatis aspernatur, debitis amet voluptatem autem laudantium totam suscipit earum iusto mollitia accusamus, eos maiores, fugit praesentium placeat porro itaque. Nulla, molestias vel! Cupiditate iste repellendus delectus unde eos consequuntur!</p>
+            </div>
+        </div>
+    
+        <button id="btn">View Model</button>
     </div>
-
-    <button id="btn">View Model</button>
 </body>
 
 <script>
     let button = document.getElementById("btn");
     let screen = document.querySelector(".screen");
+    let cross = document.getElementById("cross");
 
     button.addEventListener("click", () => {
         screen.style.display = "block";
@@ -55,6 +104,10 @@
         if(e.target == screen){
             screen.style.display = "none";
         }
+    })
+
+    cross.addEventListener("click", () => {
+        screen.style.display = "none";
     })
 </script>
 </html>
