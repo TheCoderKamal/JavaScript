@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="style.css">
 
 <body>
-    <div id="container">
+    <form onsubmit="addData(event)" id="container">
         <div id="input">
             <input type="text" placeholder="Enter your Task ..." id="inp">
-            <button id="add">
+            <button type="submit" id="add">
                 <span class="material-symbols-outlined">
                     add
                 </span>
@@ -26,7 +26,7 @@
             </div>
         </div>
 
-    </div>
+    </form>
 </body>
 
     <script src="./script.js"></script>
