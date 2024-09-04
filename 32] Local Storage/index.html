@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    // store the data in the local storage
+    localStorage.setItem("name", "kamal");
+    localStorage.setItem("age", "20");
+    localStorage.setItem("id", "220210101482");
+    localStorage.setItem("pass", "1234");
+    localStorage.setItem("phoneNo", "9876543210");
+
+    // get the data from local storage
+    let age =localStorage.getItem("age");
+    console.log("Age : ", age);
+
+    // remove the data from local storage
+    localStorage.removeItem("age");
+
+    // clear the local storage
+    localStorage.clear();
+
+    // make a simple object
+    let person = {
+        name : "abc",
+        age : 12
+    }
+
+    // make a JSON object
+    let student = {
+        "name" : "Student",
+        "age" : 12
+    }
+
+    // stringify the simple object
+    localStorage.setItem("obj", JSON.stringify(student));
+
+    // GET the data from local storage in simple object
+    let obj = JSON.parse(localStorage.getItem("obj"));
+    console.log(obj)
+</script>
