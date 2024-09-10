@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        :root{
+            --bg-color: #59d109;
+            --text-color: #ffffff;
+            --box-color: #ffe3e3;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;  
+            scrollbar-width: none;     
+        }
+    </style>
+</head>
+<body>
+    <div class="w-[100%] h-[100vh] flex bg-blue-400 justify-center items-center bg-[url('https://images3.alphacoders.com/133/1332803.png')]">
+        <div class="w-[50%] h-[100%] z-10 flex justify-center items-center flex-col">
+            <form onsubmit="getData(event)" class="h-[50%] w-[80%] flex flex-col backdrop-blur-2xl flex justify-center drop-shadow-2xl px-[100px] rounded-[30px]">
+                <input type="text" id="image-url" placeholder="Image URL" class="mb-4 bg-transparent border border-[--box-color] h-[60px] rounded-xl text-center outline-0 placeholder:text-[18px] text-[18px] text-[--box-color] placeholder:text-[--box-color]">
+                <input type="text" id="image-title" placeholder="Image Title" class="mb-4 bg-transparent border border-[--box-color] h-[60px] rounded-xl text-center outline-0 placeholder:text-[18px] text-[18px] text-[--box-color] placeholder:text-[--box-color]">
+                <input type="text" id="image-price" placeholder="Image Price" class="mb-4 bg-transparent border border-[--box-color] h-[60px] rounded-xl text-center outline-0 placeholder:text-[18px] text-[18px] text-[--box-color] placeholder:text-[--box-color]">
+                <button type="submit" id="add-btn" class="h-[60px] border-[2px] border-[--bg-color] text-[--bg-color] rounded-xl text-center outline-0 border-0 text-[20px]">Add</button>
+            </form>
+        </div>
+
+        <div class="h-[20%] border border-white"></div>
+        
+        <div class="w-[50%] h-[100%] z-10 flex justify-center items-center flex-col">
+            <div id="show-div" class="hide-scrollbar flex flex-wrap justify-center gap-8 overflow-scroll h-[90%] w-[80%] rounded-[30px]">
+
+            </div>
+        </div>
+    </div>      
+</body>
+
+    <script src="./script.js">
+
+    </script>
+
+</html>
