@@ -4,9 +4,6 @@ let price = document.getElementById('image-price');
 let button = document.getElementById('add-btn');
 let showDiv = document.getElementById('show-div');
 
-let editId = null;
-
-
 
 window.onload = () => {
     let existingData = JSON.parse(localStorage.getItem("product")) || [];
@@ -65,7 +62,6 @@ const showData = (product) => {
 
     
     `;
-    console.log("deleted")
     showDiv.append(dataDiv);
 } 
 
