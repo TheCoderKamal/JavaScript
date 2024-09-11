@@ -39,23 +39,21 @@ const showData = (product) => {
     let dataDiv = document.createElement("div");
     dataDiv.innerHTML = `
         
-            <div class="w-[300px] max-w-sm rounded-2xl overflow-hidden shadow-lg p-6 backdrop-blur-2xl">
-                <!-- Image -->
-                <img class="w-full h-48 object-cover rounded-lg" src=${product.url} alt="Image Title">
+            <div class="w-[300px] max-w-sm rounded-[30px] overflow-hidden shadow-lg p-6 backdrop-blur-2xl">
+
+            <img class="w-full h-48 object-cover rounded-lg" src=${product.url} alt="Image Title">
                 
-                <!-- Image Title and Price -->
                 <div class="px-4 py-4">
                     <h3 class="text-lg font-semibold text-white">${product.title}</h3>
                     <p class="text-white">$${product.price}</p>
                 </div>
 
-                <!-- Buttons -->
                 <div class="w-full flex justify-between">
-                    <button onclick="deleteItem(${product.id})" class="border border-[red] text-[red] font-bold w-[100px] h-[40px] rounded">
-                    Delete
+                    <button onclick="deleteItem(${product.id})" class="border border-[red] text-[red] font-bold w-[100px] h-[40px] rounded-[10px]">
+                        Delete
                     </button>
-                    <button onclick="editItem(${product.id})" class="border border-[#f5c61d] text-[#f5c61d] font-bold w-[100px] h-[40px] rounded">
-                    Edit
+                    <button onclick="editItem(${product.id})" class="border border-[#f5c61d] text-[#f5c61d] font-bold w-[100px] h-[40px] rounded-[10px]">
+                        Edit
                     </button>
                 </div>
                 </div>
@@ -91,8 +89,11 @@ const editItem = (id) => {
         price.value = product.price;
 
         button.textContent = "Update Product";  
+        
 
         button.onclick = function (event) {
+            existingData = JSON.parse(localStorage.getItem('product')) || [];
+
 
             event.preventDefault();
 
@@ -106,10 +107,11 @@ const editItem = (id) => {
             title.value = "";
             price.value = "";
             button.textContent = "Add Product";
-            button.onclick = getData;
-
+            // button.onclick = getData;
             showDiv.innerHTML = "";  
-            existingData.forEach(product => {
+
+            let updatedData = JSON.parse(localStorage.getItem('product')) || [];
+            updatedData.forEach(product => {
                 showData(product);  
             });
         };

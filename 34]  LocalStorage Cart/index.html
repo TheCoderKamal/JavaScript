@@ -23,12 +23,12 @@
     </style>
 </head>
 <body>
-    <div class="w-[100%] h-[100vh] flex bg-blue-400 justify-center items-center bg-[url('https://images3.alphacoders.com/133/1332803.png')]">
+    <div class="w-[100%] h-[100vh] flex bg-blue-400 justify-center items-center bg-[url('https://static.vecteezy.com/system/resources/previews/024/081/403/large_2x/empty-dark-room-modern-futuristic-sci-fi-background-free-photo.jpg')] bg-cover bg-center">
         <div class="w-[50%] h-[100%] z-10 flex justify-center items-center flex-col">
             <form onsubmit="getData(event)" class="h-[50%] w-[80%] flex flex-col backdrop-blur-2xl flex justify-center drop-shadow-2xl px-[100px] rounded-[30px]">
-                <input type="text" id="image-url" placeholder="Image URL" class="mb-4 bg-transparent border border-[--box-color] h-[60px] rounded-xl text-center outline-0 placeholder:text-[18px] text-[18px] text-[--box-color] placeholder:text-[--box-color]">
-                <input type="text" id="image-title" placeholder="Image Title" class="mb-4 bg-transparent border border-[--box-color] h-[60px] rounded-xl text-center outline-0 placeholder:text-[18px] text-[18px] text-[--box-color] placeholder:text-[--box-color]">
-                <input type="text" id="image-price" placeholder="Image Price" class="mb-4 bg-transparent border border-[--box-color] h-[60px] rounded-xl text-center outline-0 placeholder:text-[18px] text-[18px] text-[--box-color] placeholder:text-[--box-color]">
+                <input type="url" id="image-url" placeholder="Image URL" class="mb-4 bg-transparent border border-[--box-color] h-[60px] rounded-xl text-center outline-0 placeholder:text-[18px] text-[18px] text-[--box-color] placeholder:text-[--box-color]" required> 
+                <input type="text" id="image-title" placeholder="Image Title" class="mb-4 bg-transparent border border-[--box-color] h-[60px] rounded-xl text-center outline-0 placeholder:text-[18px] text-[18px] text-[--box-color] placeholder:text-[--box-color]" required>
+                <input type="text" id="image-price" placeholder="Image Price" class="mb-4 bg-transparent border border-[--box-color] h-[60px] rounded-xl text-center outline-0 placeholder:text-[18px] text-[18px] text-[--box-color] placeholder:text-[--box-color]" required>
                 <button type="submit" id="add-btn" class="h-[60px] border-[2px] border-[--bg-color] text-[--bg-color] rounded-xl text-center outline-0 border-0 text-[20px]">Add</button>
             </form>
         </div>
