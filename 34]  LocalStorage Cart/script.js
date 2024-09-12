@@ -89,14 +89,8 @@ const editItem = (id) => {
         price.value = product.price;
 
         button.textContent = "Update Product";  
-        
 
-        button.onclick = function (event) {
-            existingData = JSON.parse(localStorage.getItem('product')) || [];
-
-
-            event.preventDefault();
-
+        button.onclick = function () {
             product.url = url.value;
             product.title = title.value;
             product.price = price.value;
@@ -107,11 +101,10 @@ const editItem = (id) => {
             title.value = "";
             price.value = "";
             button.textContent = "Add Product";
-            // button.onclick = getData;
-            showDiv.innerHTML = "";  
+            button.onclick = getData;
 
-            let updatedData = JSON.parse(localStorage.getItem('product')) || [];
-            updatedData.forEach(product => {
+            showDiv.innerHTML = "";  
+            existingData.forEach(product => {
                 showData(product);  
             });
         };
