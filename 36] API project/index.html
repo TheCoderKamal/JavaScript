@@ -1,0 +1,110 @@
+<!-- https://api.covidtracking.com/v1/states/info.json -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API - project</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        #showData{
+            padding-block: 50px;
+            padding-inline: 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));;
+            gap: 10px;
+        }
+
+        .card{
+            border: 1px solid #ccc;
+            text-wrap: wrap;
+            display: flex;
+            background-color: black;
+            color: white;
+            border-radius: 30px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- We will show the data cards here. -->
+    <div id="showData">
+
+    </div>
+
+</body>
+</html>
+
+<script>
+
+    // get the id to show all the data cards in the HTML.
+    let showData = document.getElementById("showData");
+
+    // Make a asynchronous function to work asynchronously in project.
+    let data = async() => {
+
+        // getData stores the data with comes from API and also it will not go to execute second statement untill this statement is executed.
+        let getData = await fetch("https://api.covidtracking.com/v1/states/info.json");
+
+        // it converts the data into JSON format.
+        let details = await getData.json();
+
+        console.log(details)
+
+        // will make card for each object which comes from API.
+        details.forEach((data) => {
+
+            // make a div for card.
+            let card = document.createElement("div");
+
+            // use split method to short the notes details.
+            let note = data.notes.split(".")[0] + ".";
+
+            // set the innerHTML of card with the data.
+            card.innerHTML = `
+                <table cellspacing="20px">
+                    <tr>
+                        <th style = "border-right: 1px dashed white;">Name</th>
+                        <td>${data.name}</td>
+                    </tr>  
+                    <tr>
+                        <th style = "border-right: 1px dashed white;">State</th>
+                        <td>${data.state}</td>
+                    </tr>  
+                    <tr>
+                        <th style = "border-right: 1px dashed white;">Note</th>
+                        <td>${note}</td>
+                    </tr>  
+                    <tr>
+                        <th style = "border-right: 1px dashed white; padding: 5px;">Result</th>
+                        <td>${data.totalTestResultsField}</td>
+                    </tr>
+                    <tr>
+                        <th style = "border-right: 1px dashed white; padding: 5px;">Twitter</th>
+                        <td>${data.twitter}</td>
+                    </tr>      
+                    
+                </table>
+                    
+            `;
+            
+            card.className = "card"
+
+            // append the card to the showData div.  It will show all the data cards in the HTML.
+            showData.appendChild(card);
+        });
+
+        
+    }
+
+    // call the data function to fetch and show the data.
+    data();
+</script>
