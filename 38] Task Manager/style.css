@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --font: #fff;
+    --bg: #f7fdff;
+    --box: #000f24;
+    --add: rgb(18, 172, 18);
+    --edit: #bfc20a;
+    --delete: rgb(216, 3, 3);
+}
+
+#container{
+    height: 100vh;
+    width: 100vw;
+    background: var(--bg);
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#input{
+    width: 50%;
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+#inp{
+    width: 91.5%;
+    height: 60px;
+    border: none;
+    outline: 0;
+    border-radius: 10px;
+    color: var(--font);
+    padding-inline: 20px;
+    font-size: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    background: var(--box);
+}
+
+#inp::placeholder{
+    color: var(--font);
+}
+
+#add{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-radius: 10px;
+    color: var(--box);
+    border: 1px solid var(--box);
+    font-size: 20px;
+}
+
+#hide{
+    width: 50%;
+    display: none;
+}
+
+#data{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: var(--box);
+    border-radius: 10px;
+    color: var(--font);
+    padding-left: 40px;
+    padding-right: 20px;
+    text-align: center;
+    padding-block: 20px; 
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    font-size: 25px;
+}
+
+#item{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+#button{
+    display: flex;
+    gap: 20px;
+    
+}
+
+.edit{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid var(--edit);
+    border-radius: 10px;
+    color: var(--edit);
+    font-size: 20px;
+}
+
+.delete{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid var(--delete);
+    border-radius: 10px;
+    color: var(--delete);
+    font-size: 20px;
+}
