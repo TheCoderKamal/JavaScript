@@ -6,7 +6,7 @@
 
 :root{
     --bg: #d6e3ff;
-    --box: #02062d;
+    --box: #01041a;
     --success: #1b9b2e;
     --text: #fff;
     --place-holder: #d4d3d3;
@@ -171,5 +171,5 @@ button .material-symbols-outlined {
 
 .button-group{
     display: flex;
-    gap: 20px;
+    gap: 10px;
 }
