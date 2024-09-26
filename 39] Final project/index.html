@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Book</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+
+<body>
+
+    <!-- container -->
+    <div class="container">
+
+        <!-- flash-page -->
+        <div id="flash-page">
+            <div class="flash-message">Food Recipes will be ready soon ...</div>
+        </div>
+
+        <!-- main page -->
+        <div id="main-page">
+
+            <!-- main-display -->
+            <div class="main-display">
+
+                <!-- add-item -->
+                <div id="add-item">
+                    <form id="form" onsubmit="addRecipe(event)">
+                        <input type="url" id="recipe-image" placeholder="Enter Image URL" required>
+                        <input type="text" id="recipe-name" placeholder="Enter Recipe Name" required>
+                        <input type="text" id="recipe-ingredients" placeholder="Enter Ingredients (comma separated)" required>
+                        <input type="text" id="recipe-instructions" placeholder="Enter Instructions (comma separated)" required>
+                        <input type="text" id="cuisine-type" placeholder="Enter Cuisine type" required>
+                        <button type="submit" id="add-btn">Add Recipe</button>
+                    </form>
+                </div>
+
+                <!-- show item -->
+                <div id="show-item"></div>
+            </div>
+        </div>
+    </div>
+</body> 
+
+<script src="./script.js"></script>
+
+</html>
