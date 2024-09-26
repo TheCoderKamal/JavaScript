@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+
+
 :root{
     --bg: #d6e3ff;
     --box: #01041a;
@@ -22,6 +24,20 @@
     height: 100vh;
     background-color: var(--box);
 
+}
+
+.heading{
+    text-align: center;
+    color: var(--text);
+    font-size: 40px;
+    font-style: oblique;
+    border: 1px solid var(--text);
+    border-radius: 15px;
+    padding-block: 10px;
+    padding-inline: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Input Tasks */
@@ -119,6 +135,8 @@
     border-radius: 15px;
 }
 
+
+/* Buttons */
 
 button {
     background-color: transparent;

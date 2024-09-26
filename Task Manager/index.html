@@ -14,9 +14,10 @@
 <body>
     <!-- Main Container -->
     <div class="container">
+        <h1 class="heading">Task Manager</h1>
 
         <!-- Input Tasks -->
-        <form id="write-tasks" onsubmit="addTask(event)">
+        <form id="write-tasks" onsubmit="addTask(event)" autocapitalize="off">
             <input type="text" id="task-input" placeholder="Enter a task...">
             <button type="submit" id="add-task">
                 <span class="material-symbols-outlined">add</span>

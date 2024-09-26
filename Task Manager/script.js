@@ -41,7 +41,7 @@ window.onload = () => {
     });
 }
 
-const addTask = (event) => {
+const addTask = (event)  => {
     event.preventDefault();
 
     let taskText = taskInput.value;
